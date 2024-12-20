@@ -1,4 +1,8 @@
 from datetime import datetime
+from abc import ABC, abstractmethod
+
+from email_contact import EmailContact
+from sms_contact import SmsContact
 
 
 def verification_password(password):
@@ -24,13 +28,8 @@ def year_count(year):
         print(year,"old: ",year - pass_year)
 
 def piramid_triangle(n):
-    letters=''
-    i=0
-
-    for element in n:
-        i+=1
-        letters= '*' * i
-        print(letters)
+    contact=SmsContact()
+    contact.send_message('Je suis le contact', 'Bonjour les ZER0S')
 
 if __name__ == '__main__':
     verification_password('Jesuisespuissant')
